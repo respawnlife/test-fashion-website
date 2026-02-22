@@ -1,18 +1,20 @@
+import { useTranslation } from 'react-i18next';
 import './Hero.css';
 
 function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="hero">
       <div className="hero-content">
         <h1 className="hero-title">
-          发现你的<br />
-          <span>时尚风格</span>
+          {t('home.heroTitle')}
         </h1>
         <p className="hero-subtitle">
-          精选女装、鞋履与包包，演绎现代女性的优雅与自信
+          {t('home.heroSubtitle')}
         </p>
         <a href="#collections" className="hero-cta">
-          探索系列
+          {t('home.exploreBtn')}
         </a>
       </div>
       <div className="hero-image">

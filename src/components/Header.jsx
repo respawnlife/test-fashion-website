@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 import './Header.css';
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const isActive = (path) => location.pathname === path;
 
@@ -21,40 +24,44 @@ function Header() {
             className={`nav-link ${isActive('/') ? 'active' : ''}`}
             onClick={() => setMobileMenuOpen(false)}
           >
-            首页
+            {t('nav.home')}
           </Link>
           <Link 
             to="/women" 
             className={`nav-link ${isActive('/women') ? 'active' : ''}`}
             onClick={() => setMobileMenuOpen(false)}
           >
-            女装
+            {t('nav.women')}
           </Link>
           <Link 
             to="/shoes" 
             className={`nav-link ${isActive('/shoes') ? 'active' : ''}`}
             onClick={() => setMobileMenuOpen(false)}
           >
-            鞋子
+            {t('nav.shoes')}
           </Link>
           <Link 
             to="/bags" 
             className={`nav-link ${isActive('/bags') ? 'active' : ''}`}
             onClick={() => setMobileMenuOpen(false)}
           >
-            包包
+            {t('nav.bags')}
           </Link>
         </nav>
 
-        <button 
-          className="mobile-menu-btn"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div className="header-actions">
+          <LanguageSwitcher />
+          
+          <button 
+            className="mobile-menu-btn"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
   );

@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './LinkAlert.css';
 
 function LinkAlert({ url, children, className }) {
   const [showAlert, setShowAlert] = useState(false);
+  const { t } = useTranslation();
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -34,16 +36,16 @@ function LinkAlert({ url, children, className }) {
         <div className="link-alert-overlay" onClick={cancelLeave}>
           <div className="link-alert-modal" onClick={(e) => e.stopPropagation()}>
             <div className="link-alert-icon">⚠️</div>
-            <h3>即将离开本站</h3>
-            <p>您即将跳转到外部网站：</p>
+            <h3>{t('linkAlert.title')}</h3>
+            <p>{t('linkAlert.message')}</p>
             <p className="link-alert-url">{url}</p>
-            <p className="link-alert-note">请注意个人信息和财产安全</p>
+            <p className="link-alert-note">{t('linkAlert.note')}</p>
             <div className="link-alert-actions">
               <button className="btn-cancel" onClick={cancelLeave}>
-                取消
+                {t('linkAlert.cancel')}
               </button>
               <button className="btn-confirm" onClick={confirmLeave}>
-                继续访问
+                {t('linkAlert.confirm')}
               </button>
             </div>
           </div>

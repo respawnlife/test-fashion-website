@@ -18,6 +18,12 @@
   align-items: center;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .logo {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.75rem;
@@ -85,6 +91,10 @@
     display: flex;
   }
 
+  .header-actions {
+    align-items: center;
+  }
+
   .nav {
     position: fixed;
     top: 70px;
@@ -109,5 +119,14 @@
 
   .nav-link {
     font-size: 1.1rem;
+  }
+
+  .language-switcher {
+    margin-top: 0;
+  }
+
+  .language-select {
+    width: auto;
+    max-width: none;
   }
 }

@@ -1,11 +1,25 @@
+import { useTranslation } from 'react-i18next';
 import Hero from '../components/Hero';
 import CategorySection from '../components/CategorySection';
 import ProductCard from '../components/ProductCard';
-import { categories, products } from '../data/products';
+import { categories, products as originalProducts } from '../data/products';
 import './Home.css';
 
 function Home() {
-  const featuredProducts = products.slice(0, 6);
+  const { t, i18n } = useTranslation();
+
+  // Get translated featured products
+  const featuredProducts = originalProducts.slice(0, 6).map((product, index) => {
+    const langProducts = t('products', { returnObjects: true }) || {};
+    const categoryProducts = langProducts[product.category] || [];
+    const translatedProduct = categoryProducts[index % categoryProducts.length];
+    
+    return {
+      ...product,
+      name: translatedProduct ? translatedProduct.name : product.name,
+      price: translatedProduct ? translatedProduct.price : product.price
+    };
+  });
 
   return (
     <main className="home">
@@ -13,16 +27,16 @@ function Home() {
       
       <section id="collections" className="section">
         <div className="section-header">
-          <h2 className="section-title">探索系列</h2>
-          <p className="section-subtitle">发现属于你的完美风格</p>
+          <h2 className="section-title">{t('home.browseCategories')}</h2>
+          <p className="section-subtitle">{t('home.heroSubtitle')}</p>
         </div>
         <CategorySection categories={categories} />
       </section>
 
       <section className="section">
         <div className="section-header">
-          <h2 className="section-title">精选商品</h2>
-          <p className="section-subtitle">本季热门推荐</p>
+          <h2 className="section-title">{t('home.featuredProducts')}</h2>
+          <p className="section-subtitle">{t('home.qualityDesc')}</p>
         </div>
         <div className="featured-grid">
           {featuredProducts.map((product) => (
@@ -35,9 +49,7 @@ function Home() {
         <div className="brand-content">
           <h2 className="brand-title">关于 FASHION</h2>
           <p className="brand-text">
-            我们致力于为您带来最前沿的时尚单品，从优雅的女装到精致的鞋履，
-            从实用的包包到时尚的配饰，每一件产品都经过精心挑选，
-            只为展现最完美的你。
+            {t('home.heroSubtitle')}
           </p>
         </div>
       </section>

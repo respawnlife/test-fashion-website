@@ -1,0 +1,38 @@
+{
+  "name": "fashion-website-backend",
+  "version": "1.0.0",
+  "description": "Fashion website backend with admin panel and product crawler",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "init-db": "node src/utils/initDb.js",
+    "seed-admin": "node src/utils/seedAdmin.js",
+    "crawler": "node src/services/crawler.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^9.4.3",
+    "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "node-cron": "^3.0.3",
+    "puppeteer": "^21.7.0",
+    "robots-parser": "^3.0.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

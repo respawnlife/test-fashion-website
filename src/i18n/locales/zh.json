@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "首页",
+    "women": "女装",
+    "shoes": "鞋子",
+    "bags": "包包"
+  },
+  "footer": {
+    "tagline": "发现你的时尚风格",
+    "categories": "分类",
+    "about": "关于",
+    "aboutUs": "关于我们",
+    "contact": "联系方式",
+    "faq": "常见问题",
+    "follow": "关注",
+    "wechat": "微信",
+    "weibo": "微博",
+    "instagram": "Instagram",
+    "copyright": "© 2024 FASHION. All rights reserved."
+  },
+  "home": {
+    "heroTitle": "发现你的时尚风格",
+    "heroSubtitle": "精选女装、鞋包，展现优雅与自信",
+    "exploreBtn": "立即探索",
+    "browseCategories": "浏览分类",
+    "featuredProducts": "精选商品",
+    "viewAll": "查看全部 →",
+    "qualityTitle": "精选品质",
+    "qualityDesc": "每一件商品都经过精心挑选",
+    "shippingTitle": "快速配送",
+    "shippingDesc": "合作商家提供高效物流服务",
+    "paymentTitle": "安全支付",
+    "paymentDesc": "支持多种安全支付方式",
+    "serviceTitle": "售后保障",
+    "serviceDesc": "享受完善的售后服务"
+  },
+  "category": {
+    "all": "全部商品",
+    "women": "女装",
+    "shoes": "鞋子",
+    "bags": "包包",
+    "totalProducts": "共 {{count}} 件商品",
+    "sort": "排序",
+    "sortDefault": "默认",
+    "sortPriceAsc": "价格从低到高",
+    "sortPriceDesc": "价格从高到低",
+    "sortName": "名称",
+    "noProducts": "暂无商品",
+    "prevPage": "上一页",
+    "nextPage": "下一页"
+  },
+  "product": {
+    "viewDetails": "查看详情"
+  },
+  "linkAlert": {
+    "title": "即将离开本站",
+    "message": "您即将跳转到外部网站：",
+    "note": "请注意个人信息和财产安全",
+    "cancel": "取消",
+    "confirm": "继续访问"
+  },
+  "categoryCard": {
+    "explore": "探索系列 →"
+  },
+  "languageSwitcher": {
+    "label": "语言"
+  },
+  "products": {
+    "women": [
+      { "name": "优雅丝绸连衣裙", "price": 899 },
+      { "name": "法式复古衬衫", "price": 459 },
+      { "name": "高腰阔腿裤", "price": 599 },
+      { "name": "羊毛混纺大衣", "price": 1299 },
+      { "name": "蕾丝边针织衫", "price": 399 },
+      { "name": "印花半身裙", "price": 529 },
+      { "name": "羊绒毛衣", "price": 699 },
+      { "name": "修身西装外套", "price": 899 },
+      { "name": "碎花长裙", "price": 759 },
+      { "name": "经典风衣", "price": 1199 },
+      { "name": "真丝吊带衫", "price": 359 },
+      { "name": "百褶雪纺裙", "price": 489 }
+    ],
+    "shoes": [
+      { "name": "经典尖头高跟鞋", "price": 799 },
+      { "name": "时尚小白鞋", "price": 459 },
+      { "name": "优雅踝靴", "price": 899 },
+      { "name": "夏季凉鞋", "price": 359 },
+      { "name": "乐福鞋", "price": 699 },
+      { "name": "运动休闲鞋", "price": 599 },
+      { "name": "细带高跟凉鞋", "price": 659 },
+      { "name": "切尔西靴", "price": 899 },
+      { "name": "芭蕾平底鞋", "price": 429 },
+      { "name": "厚底运动鞋", "price": 559 },
+      { "name": "过膝长靴", "price": 1099 },
+      { "name": "懒人穆勒鞋", "price": 499 }
+    ],
+    "bags": [
+      { "name": "真皮手提包", "price": 1299 },
+      { "name": "时尚斜挎包", "price": 699 },
+      { "name": "晚宴手拿包", "price": 459 },
+      { "name": "通勤托特包", "price": 899 },
+      { "name": "迷你链条包", "price": 599 },
+      { "name": "复古马鞍包", "price": 799 },
+      { "name": "帆布购物袋", "price": 399 },
+      { "name": "皮革双肩包", "price": 999 },
+      { "name": "水桶包", "price": 659 },
+      { "name": "手提单肩包", "price": 859 },
+      { "name": "编织草编包", "price": 459 },
+      { "name": "菱格单肩包", "price": 799 }
+    ]
+  },
+  "categories": {
+    "women": {
+      "name": "女装",
+      "description": "优雅时尚的女性服装"
+    },
+    "shoes": {
+      "name": "鞋子",
+      "description": "舒适与时尚并存的鞋履"
+    },
+    "bags": {
+      "name": "包包",
+      "description": "精致的配饰点缀你的生活"
+    }
+  }
+}

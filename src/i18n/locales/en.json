@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "Home",
+    "women": "Women",
+    "shoes": "Shoes",
+    "bags": "Bags"
+  },
+  "footer": {
+    "tagline": "Discover Your Style",
+    "categories": "Categories",
+    "about": "About",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "follow": "Follow Us",
+    "wechat": "WeChat",
+    "weibo": "Weibo",
+    "instagram": "Instagram",
+    "copyright": "© 2024 FASHION. All rights reserved."
+  },
+  "home": {
+    "heroTitle": "Discover Your Style",
+    "heroSubtitle": "Curated women's fashion, shoes & bags to showcase elegance and confidence",
+    "exploreBtn": "Explore Now",
+    "browseCategories": "Browse Categories",
+    "featuredProducts": "Featured Products",
+    "viewAll": "View All →",
+    "qualityTitle": "Curated Quality",
+    "qualityDesc": "Every item is carefully selected",
+    "shippingTitle": "Fast Shipping",
+    "shippingDesc": "Efficient logistics from our partners",
+    "paymentTitle": "Secure Payment",
+    "paymentDesc": "Multiple secure payment options",
+    "serviceTitle": "After-Sales Support",
+    "serviceDesc": "Enjoy comprehensive after-sales service"
+  },
+  "category": {
+    "all": "All Products",
+    "women": "Women",
+    "shoes": "Shoes",
+    "bags": "Bags",
+    "totalProducts": "{{count}} products",
+    "sort": "Sort",
+    "sortDefault": "Default",
+    "sortPriceAsc": "Price: Low to High",
+    "sortPriceDesc": "Price: High to Low",
+    "sortName": "Name",
+    "noProducts": "No products available",
+    "prevPage": "Previous",
+    "nextPage": "Next"
+  },
+  "product": {
+    "viewDetails": "View Details"
+  },
+  "linkAlert": {
+    "title": "Leaving This Site",
+    "message": "You are about to navigate to an external website:",
+    "note": "Please protect your personal information and financial security",
+    "cancel": "Cancel",
+    "confirm": "Continue"
+  },
+  "categoryCard": {
+    "explore": "Explore Collection →"
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  },
+  "products": {
+    "women": [
+      { "name": "Elegant Silk Dress", "price": 899 },
+      { "name": "French Vintage Blouse", "price": 459 },
+      { "name": "High-Waisted Wide Leg Pants", "price": 599 },
+      { "name": "Wool Blend Coat", "price": 1299 },
+      { "name": "Lace Trim Knitwear", "price": 399 },
+      { "name": "Printed Midi Skirt", "price": 529 },
+      { "name": "Cashmere Sweater", "price": 699 },
+      { "name": "Tailored Blazer", "price": 899 },
+      { "name": "Floral Maxi Dress", "price": 759 },
+      { "name": "Classic Trench Coat", "price": 1199 },
+      { "name": "Silk Camisole", "price": 359 },
+      { "name": "Pleated Chiffon Skirt", "price": 489 }
+    ],
+    "shoes": [
+      { "name": "Classic Pointed Heels", "price": 799 },
+      { "name": "Fashion White Sneakers", "price": 459 },
+      { "name": "Elegant Ankle Boots", "price": 899 },
+      { "name": "Summer Sandals", "price": 359 },
+      { "name": "Loafers", "price": 699 },
+      { "name": "Casual Sports Shoes", "price": 599 },
+      { "name": "Strappy Heeled Sandals", "price": 659 },
+      { "name": "Chelsea Boots", "price": 899 },
+      { "name": "Ballet Flats", "price": 429 },
+      { "name": "Platform Sneakers", "price": 559 },
+      { "name": "Knee-High Boots", "price": 1099 },
+      { "name": "Slip-On Mules", "price": 499 }
+    ],
+    "bags": [
+      { "name": "Genuine Leather Tote", "price": 1299 },
+      { "name": "Fashion Crossbody Bag", "price": 699 },
+      { "name": "Evening Clutch", "price": 459 },
+      { "name": "Work Tote Bag", "price": 899 },
+      { "name": "Mini Chain Bag", "price": 599 },
+      { "name": "Vintage Saddle Bag", "price": 799 },
+      { "name": "Canvas Shopper", "price": 399 },
+      { "name": "Leather Backpack", "price": 999 },
+      { "name": "Bucket Bag", "price": 659 },
+      { "name": "Top Handle Bag", "price": 859 },
+      { "name": "Woven Straw Bag", "price": 459 },
+      { "name": "Quilted Shoulder Bag", "price": 799 }
+    ]
+  },
+  "categories": {
+    "women": {
+      "name": "Women",
+      "description": "Elegant and fashionable women's clothing"
+    },
+    "shoes": {
+      "name": "Shoes",
+      "description": "Comfortable and stylish footwear"
+    },
+    "bags": {
+      "name": "Bags",
+      "description": "Exquisite accessories to complement your life"
+    }
+  }
+}

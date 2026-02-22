@@ -1,22 +1,38 @@
+import { useTranslation } from 'react-i18next';
 import ProductCard from '../components/ProductCard';
-import { products } from '../data/products';
+import { products as originalProducts } from '../data/products';
 import './Category.css';
 
 function Bags() {
-  const bagsProducts = products.filter(p => p.category === 'bags');
+  const { t, i18n } = useTranslation();
+
+  // Get translated products
+  const translatedProducts = originalProducts
+    .filter(p => p.category === 'bags')
+    .map((product, index) => {
+      const langProducts = t('products.bags', { returnObjects: true }) || [];
+      if (langProducts[index]) {
+        return {
+          ...product,
+          name: langProducts[index].name,
+          price: langProducts[index].price
+        };
+      }
+      return product;
+    });
 
   return (
     <main className="category-page">
       <div className="category-hero">
         <div className="category-hero-content">
-          <h1 className="category-title">包包</h1>
-          <p className="category-subtitle">精致的配饰点缀你的生活</p>
+          <h1 className="category-title">{t('categories.bags.name')}</h1>
+          <p className="category-subtitle">{t('categories.bags.description')}</p>
         </div>
       </div>
       
       <div className="category-products">
         <div className="products-grid">
-          {bagsProducts.map((product) => (
+          {translatedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

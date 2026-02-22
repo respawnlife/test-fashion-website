@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "women": "レディース",
+    "shoes": "シューズ",
+    "bags": "バッグ"
+  },
+  "footer": {
+    "tagline": "あなたのスタイルを見つける",
+    "categories": "カテゴリー",
+    "about": "について",
+    "aboutUs": "私たちについて",
+    "contact": "お問い合わせ",
+    "faq": "よくある質問",
+    "follow": "フォローする",
+    "wechat": "WeChat",
+    "weibo": "Weibo",
+    "instagram": "Instagram",
+    "copyright": "© 2024 FASHION. All rights reserved."
+  },
+  "home": {
+    "heroTitle": "あなたのスタイルを見つける",
+    "heroSubtitle": "エレガンスと自信を表現する、厳選されたレディースファッション、シューズ＆バッグ",
+    "exploreBtn": "今すぐ探索",
+    "browseCategories": "カテゴリーを見る",
+    "featuredProducts": "おすすめ商品",
+    "viewAll": "すべて見る →",
+    "qualityTitle": "厳選された品質",
+    "qualityDesc": "すべてのアイテムを慎重に選択",
+    "shippingTitle": "迅速な配送",
+    "shippingDesc": "パートナーによる効率的な物流",
+    "paymentTitle": "安全な支払い",
+    "paymentDesc": "複数の安全な支払いオプション",
+    "serviceTitle": "アフターサービス",
+    "serviceDesc": "包括的なアフターサービスを楽しむ"
+  },
+  "category": {
+    "all": "すべての商品",
+    "women": "レディース",
+    "shoes": "シューズ",
+    "bags": "バッグ",
+    "totalProducts": "{{count}} 点の商品",
+    "sort": "並び替え",
+    "sortDefault": "デフォルト",
+    "sortPriceAsc": "価格：安い順",
+    "sortPriceDesc": "価格：高い順",
+    "sortName": "名前",
+    "noProducts": "商品がありません",
+    "prevPage": "前へ",
+    "nextPage": "次へ"
+  },
+  "product": {
+    "viewDetails": "詳細を見る"
+  },
+  "linkAlert": {
+    "title": "サイトを離れます",
+    "message": "外部ウェブサイトへ移動します：",
+    "note": "個人情報と財務情報の保護にご注意ください",
+    "cancel": "キャンセル",
+    "confirm": "続ける"
+  },
+  "categoryCard": {
+    "explore": "コレクションを探索 →"
+  },
+  "languageSwitcher": {
+    "label": "言語"
+  },
+  "products": {
+    "women": [
+      { "name": "エレガントシルクドレス", "price": 899 },
+      { "name": "フレンチヴィンテージブラウス", "price": 459 },
+      { "name": "ハイウエストワイドパンツ", "price": 599 },
+      { "name": "ウールブレンドコート", "price": 1299 },
+      { "name": "レーストリムニット", "price": 399 },
+      { "name": "プリントミディスカート", "price": 529 },
+      { "name": "カシミアセーター", "price": 699 },
+      { "name": "テーラードブレザー", "price": 899 },
+      { "name": "フローラルマキシドレス", "price": 759 },
+      { "name": "クラシックトレンチコート", "price": 1199 },
+      { "name": "シルクキャミソール", "price": 359 },
+      { "name": "プリーツシフォンスカート", "price": 489 }
+    ],
+    "shoes": [
+      { "name": "クラシックポインテッドヒール", "price": 799 },
+      { "name": "ファッションホワイトスニーカー", "price": 459 },
+      { "name": "エレガントアンクルブーツ", "price": 899 },
+      { "name": "サマーサンダル", "price": 359 },
+      { "name": "ローファー", "price": 699 },
+      { "name": "カジュアルスポーツシューズ", "price": 599 },
+      { "name": "ストラップヒールサンダル", "price": 659 },
+      { "name": "チェルシーブーツ", "price": 899 },
+      { "name": "バレエフラッツ", "price": 429 },
+      { "name": "プラットフォームスニーカー", "price": 559 },
+      { "name": "ニーハイブーツ", "price": 1099 },
+      { "name": "スリップオンミュール", "price": 499 }
+    ],
+    "bags": [
+      { "name": "本革トートバッグ", "price": 1299 },
+      { "name": "ファッションクロスボディバッグ", "price": 699 },
+      { "name": "イブニングクラッチ", "price": 459 },
+      { "name": "ワークトートバッグ", "price": 899 },
+      { "name": "ミニチェーンバッグ", "price": 599 },
+      { "name": "ヴィンテージサドルバッグ", "price": 799 },
+      { "name": "キャンバスショッパー", "price": 399 },
+      { "name": "レザーバックパック", "price": 999 },
+      { "name": "バケットバッグ", "price": 659 },
+      { "name": "トップハンドルバッグ", "price": 859 },
+      { "name": "編み込みストローバッグ", "price": 459 },
+      { "name": "キルテッドショルダーバッグ", "price": 799 }
+    ]
+  },
+  "categories": {
+    "women": {
+      "name": "レディース",
+      "description": "エレガントでファッショナブルな女性服"
+    },
+    "shoes": {
+      "name": "シューズ",
+      "description": "快適でスタイリッシュなフットウェア"
+    },
+    "bags": {
+      "name": "バッグ",
+      "description": "あなたの生活を彩る洗練されたアクセサリー"
+    }
+  }
+}

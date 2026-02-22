@@ -1,7 +1,8 @@
 import { useState, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import ProductCard from '../components/ProductCard';
-import { products } from '../data/products';
+import { products as originalProducts } from '../data/products';
 import './CategoryPage.css';
 
 function CategoryPage() {
@@ -9,13 +10,43 @@ function CategoryPage() {
   const [sortBy, setSortBy] = useState('default');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
+  const { t, i18n } = useTranslation();
+
+  // Get translated products based on current language
+  const translatedProducts = useMemo(() => {
+    const lang = i18n.language;
+    const langProducts = t('products', { returnObjects: true });
+    
+    // Map original products with translated names
+    const getTranslatedName = (originalProduct, index) => {
+      const categoryProducts = langProducts[originalProduct.category] || [];
+      if (categoryProducts[index]) {
+        return categoryProducts[index].name;
+      }
+      return originalProduct.name;
+    };
+
+    const getTranslatedPrice = (originalProduct, index) => {
+      const categoryProducts = langProducts[originalProduct.category] || [];
+      if (categoryProducts[index]) {
+        return categoryProducts[index].price;
+      }
+      return originalProduct.price;
+    };
+
+    return originalProducts.map((product, index) => ({
+      ...product,
+      name: getTranslatedName(product, index),
+      price: getTranslatedPrice(product, index)
+    }));
+  }, [i18n.language, t]);
 
   // Filter products by category
   const filteredProducts = useMemo(() => {
-    let result = products;
+    let result = translatedProducts;
     
     if (category !== 'all') {
-      result = products.filter(p => p.category === category);
+      result = translatedProducts.filter(p => p.category === category);
     }
     
     // Sort products
@@ -25,11 +56,11 @@ function CategoryPage() {
       case 'price-desc':
         return [...result].sort((a, b) => b.price - a.price);
       case 'name':
-        return [...result].sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
+        return [...result].sort((a, b) => a.name.localeCompare(b.name, i18n.language));
       default:
         return result;
     }
-  }, [category, sortBy]);
+  }, [category, sortBy, translatedProducts, i18n.language]);
 
   // Pagination
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
@@ -39,27 +70,20 @@ function CategoryPage() {
   );
 
   // Get category name
-  const categoryNames = {
-    all: '全部商品',
-    women: '女装',
-    shoes: '鞋子',
-    bags: '包包'
-  };
-
-  const categoryName = categoryNames[category] || '商品';
+  const categoryName = category ? t(`category.${category}`) : t('category.all');
 
   return (
     <div className="category-page">
       <div className="category-header">
         <h1>{categoryName}</h1>
-        <p>共 {filteredProducts.length} 件商品</p>
+        <p>{t('category.totalProducts', { count: filteredProducts.length })}</p>
       </div>
 
       <div className="container">
         {/* Filters and Sort */}
         <div className="toolbar">
           <div className="sort-container">
-            <label>排序：</label>
+            <label>{t('category.sort')}：</label>
             <select 
               value={sortBy} 
               onChange={(e) => {
@@ -68,10 +92,10 @@ function CategoryPage() {
               }}
               className="sort-select"
             >
-              <option value="default">默认</option>
-              <option value="price-asc">价格从低到高</option>
-              <option value="price-desc">价格从高到低</option>
-              <option value="name">名称</option>
+              <option value="default">{t('category.sortDefault')}</option>
+              <option value="price-asc">{t('category.sortPriceAsc')}</option>
+              <option value="price-desc">{t('category.sortPriceDesc')}</option>
+              <option value="name">{t('category.sortName')}</option>
             </select>
           </div>
         </div>
@@ -85,7 +109,7 @@ function CategoryPage() {
           </div>
         ) : (
           <div className="no-products">
-            <p>暂无商品</p>
+            <p>{t('category.noProducts')}</p>
           </div>
         )}
 
@@ -97,7 +121,7 @@ function CategoryPage() {
               disabled={currentPage === 1}
               className="pagination-btn"
             >
-              上一页
+              {t('category.prevPage')}
             </button>
             
             <div className="pagination-numbers">
@@ -117,7 +141,7 @@ function CategoryPage() {
               disabled={currentPage === totalPages}
               className="pagination-btn"
             >
-              下一页
+              {t('category.nextPage')}
             </button>
           </div>
         )}
