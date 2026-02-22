@@ -96,12 +96,9 @@ app.use('/api/users', userRoutes);
 app.use('/api/crawler', crawlerRoutes);
 
 // Serve admin panel (built files)
-const adminPath = path.join(__dirname, '../admin/dist');
-app.use('/admin', express.static(adminPath));
-
-// Admin panel fallback
-app.get('/admin/*', (req, res) => {
-  res.sendFile(path.join(adminPath, 'index.html'));
+const adminPath = path.join(__dirname, '../admin.html');
+app.get('/admin', (req, res) => {
+  res.sendFile(adminPath);
 });
 
 // API documentation endpoint
